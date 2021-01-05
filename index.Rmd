@@ -1,0 +1,30 @@
+---
+title: "Seaweed intake and Thyroid cancer risk"
+author: 
+    Chaochen Wang| 王　超辰 
+date: "2021-01-14/15 @HOME via zoom"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      countdown: 60000
+      highlightStyle: github
+      highlightLines: true
+      highlightSpans: true
+      countIncrementalSlides: false
+      ratio: 14:9
+editor_options: 
+  chunk_output_type: console
+---
+
+
+class: middle, inverse, center
+
+# Background
+
+
+---
+class: middle
+
