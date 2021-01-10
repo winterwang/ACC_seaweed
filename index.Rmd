@@ -33,7 +33,7 @@ class: middle
 .small[
 - Iodine is an essential micronutrient that is oxidized to produce iodine-containing thyroid hormones. 
 
-- Iodine deficiency has long been a recognized global public health problem, however, there was not much emphasis on the possible consequences of **iodine excess**. 
+- Iodine deficiency has long been a recognized global public health problem, however, there was not much emphasis on the possible "consequences" of **iodine excess**. 
 
 - The sources of excess iodine can be from 
   - iodized salt, ~~drinking water~~, ~~milk rich in iodine~~, seaweeds, and dietary supplements.
@@ -78,6 +78,12 @@ background-position: 50% 50%
 background-size: contain
 
 
+???
+
+- The incidence rate of thyroid cancer increased from about 2 to nearly 10 per 100,000 people in Japan over the past three decades. 
+- However, mortality rates in both men and women stayed stable or slightly decreased.
+
+
 ---
 class: top, center, inverse
 background-image: url("./fig/globalincidence.png")
@@ -87,7 +93,42 @@ background-size: contain
 ???
 https://gco.iarc.fr/today/online-analysis-map?v=2020&mode=population&mode_population=continents&population=900&populations=900&key=asr&sex=0&cancer=32&type=0&statistic=5&prevalence=0&population_group=0&ages_group%5B%5D=0&ages_group%5B%5D=17&nb_items=10&group_cancer=1&include_nmsc=1&include_nmsc_other=1&projection=natural-earth&color_palette=default&map_scale=quantile&map_nb_colors=5&continent=0&rotate=%255B10%252C0%255D
 
+- Global incidence seems to be higher in high-income countries compared with low-income and middle-income countries for both men and women. 
 
+---
+class: top, center,
+background-image: url("./fig/globalmortality.png")
+background-position: 50% 50%
+background-size: contain
+
+???
+- However, mortality in high-income countries are among the lowest worldwide
+
+
+---
+class: top, center,inverse
+background-image: url("./fig/metaiodine.png")
+background-position: 50% 50%
+background-size: contain
+
+???
+
+- One meta analysis which included 16 observational studies reported higher thyroid cancer risk for people with high iodine exposure.
+
+
+
+---
+class: top
+background-image: url("./fig/metaOR.png")
+background-position: 50% 10%
+background-size: contain
+
+
+
+.footnote[
+- This meta-analysis evaluated different types of iodine level and we can see there is no evidence for increased thyroid cancer risk in any kind of measurements. 
+- Another problem in this study is that they **only included subjects in the highest and the lowest exposure groups**. 
+]
 
 ---
 class: top, center, inverse
