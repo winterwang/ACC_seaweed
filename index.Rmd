@@ -126,7 +126,7 @@ background-size: contain
 
 
 .footnote[.bold[
-- This meta-analysis evaluated iodine level measured by several types and we can see there is **no evidence for increased thyroid cancer risk** in any kind of measurements. 
+- This meta-analysis evaluated iodine level measured by several methods and we can see there is **no evidence for increased thyroid cancer risk** in any kind of measurements. 
 - Another problem in this study is that they **only included subjects in the highest and the lowest exposure groups**. 
 ]]
 
@@ -150,6 +150,10 @@ background-image: url("./fig/michikawa.png")
 background-position: 50% 50%
 background-size: contain
 
+???
+
+- There are 2 reports from Japan on this topic, one is from JPHC published in 2011. Where they found daily seaweed consumers had about 71% higher hazard of developing thyroid cancer compared to people had seaweed less than 2 days/week. 
+- Furthermore, their stratified analysis reported nearly four fold higher higher hazard in postmenopausal women.
 
 ---
 class: top, center, inverse
@@ -157,6 +161,12 @@ background-image: url("./fig/wang.png")
 background-position: 50% 50%
 background-size: contain
 
+???
+
+- However, in the JACC study later we published in 2015, we couldn't find the similar association as reported in the JPHC study. 
+- We considered that even with increasingly reported incidence over the years, there is still very limited number of cases that could be identified in one or two studies. Another possibility is that we all use different measurements in each study, reference group varies and may have different meanings. We are not sure whether it is appropriate to interpret all the findings in the same way. 
+- We need to find a way to conduct proper analysis on each study individually, and find one single maximum effect size for this relationship that we are interested in from each one of the study 
+- and then we can use our usual methods to combine these maximum effect size from each study.
 
 
 ---
@@ -165,7 +175,7 @@ class: middle
 # Objective
 
 .full-width[.content-box-red[.bold[.med[
-With greater numbers of participants as well as cases that can be identified through ACC database, we propose to assess the association between seaweed intake and the risk of thyroid cancer in ACC for both men and women.
+With greater numbers of participants as well as cases that can be identified through ACC database, we propose to assess **the maximum association** between seaweed intake and the risk of thyroid cancer in ACC for both men and women, through **a revised statistical approach**.
 ]]]]
 
 
@@ -180,4 +190,85 @@ class: middle
 
 ## Methods
 
-- 
+.med[.bold[
+- Descriptive analysis - show numbers and distributions of: 
+    - cases and total participants
+    - seaweed intake 
+    - Other variables that could related to both exposure and the outcome
+- Bayesian surival analysis will be conducted in each joining cohort to estimate an maximum effect size of the relationship.
+- Random effect meta-analysis - to evaluate the pooled maximum effect.
+]]
+
+---
+class: middle
+
+## Methods <br>- Bayesian survival analysis
+
+.med[.bold[
+- We already know that incidence increases over time
+  - **the hazard ratio could change over time (not proportonal)**
+- It is no longer appropriate to use the Cox **proportional** hazard model anymore
+- Weibull model in the accelerated failure time (AFT) model form is one option.
+  - produce an **acceleration factor** for comparing seaweed consumers to non-consumers about who is **faster/slower** to develop thyroid cancer during a given time period.
+]]
+
+
+---
+class: middle
+
+## Methods <br>- Maximum seaweed effect
+
+$$
+\begin{aligned}
+\mu_i & = \color{red}{\beta_E}\sum_{j = 0}^{E_i -1} \delta_j + \text{other covariates}\\
+\delta & \sim \text{Dirichlet}(\alpha)
+\end{aligned}
+$$
+
+.med[.bold[
+- Instead of coding the seaweed consumption groups as dummy variables, they should be entered as **ordered categorical predictors** <br>
+  $\color{red}{\beta_E}$ is the maximum seaweed effect <br> 
+  $\delta_j$ is the fractions (proportions) for each level of seaweed consumption
+]]
+
+---
+class: middle
+
+## Methods - example 
+
+.med[.bold[
+- If in A study, the data about seaweed consumption is collected as 5 different levels: <br> ‘never’, ‘1–2 times/month’, ‘1–2 times/week’, ‘3–4 times/week’, and ‘daily or almost daily’ (JACC study). 
+- The effect changes from <br> level 0 (never) to level 1 (1-2 times/month) is a proportion $\delta_0$ of the maximum effect $\color{red}{\beta_E}$ <br>
+level 1 (1-2 times/month) to level 2 (1–2 times/week) is a proportion $\delta_1$ of the maximum effect  $\color{red}{\beta_E}$ <br>
+$\dots$ <br>
+level 3 to level 4 is a proportion $\delta_4$ of  $\color{red}{\beta_E}$
+- There are 4 fractions $\delta_0, \delta_1, \dots, \delta_4$ <br> their sum equal to 1, $\sum_{j=0}^4 = 1$
+]
+]
+
+???
+
+- So in this method, we can allow for different exposure measurements in different studies and keep as much information as possible in the model in their original format.
+- We could also measure which level contributes the most in the increase of the seaweed effect, if there is any.
+- And each study will only produce one single maximum seaweed effect for that study.
+
+
+---
+class: middle
+
+## Methods - combining the $\color{red}{\beta_E}$s 
+
+.small[.bold[
+- These $\color{red}{\beta_E}$s are the maximum effects of seaweed on the risk of thyroid cancer.
+
+- Therefore the pooled effect could be estimated, if there are $K$ studies in the ACC join our working group: 
+  - The observed $\widehat{\beta_{Ek}}, i = 1, \dots, K$ is an estimate of the "real" effect $\beta_{Ek}$ of study $k$
+  - These "real" effects $\beta_{Ek}$ themselves follow a distribution centered with the pooled effect $\mu$, and variance $\tau^2$ - the between-study heterogeneity.
+]]
+
+$$
+\begin{aligned}
+\widehat{\beta_{Ek}} & \sim N(\beta_{Ek}, \sigma^2_{k}) \\ 
+\beta_{Ek} & \sim N(\color{red}{\mu}, \tau^2)
+\end{aligned}
+$$
