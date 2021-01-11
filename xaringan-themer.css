@@ -93,7 +93,7 @@ a, a > code {
 }
 .title-slide {
   background-color: #1c5253;
-  background-image: url(fig/seaweed-in-ocean.jpg);
+  /*background-image: url(fig/seaweed-in-ocean.jpg);*/
   background-size: cover;
   
 }
