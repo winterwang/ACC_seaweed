@@ -1,7 +1,8 @@
 ---
 title: "Seaweed intake and Thyroid cancer risk"
 author: 
-    Chaochen Wang| 王　超辰 
+    Chaochen Wang| 王　超辰 <br>
+    Aichi Medical University
 date: "2021-01-14/15 @HOME via zoom"
 output:
   xaringan::moon_reader:
