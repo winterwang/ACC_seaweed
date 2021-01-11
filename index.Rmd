@@ -279,5 +279,10 @@ class: middle, center, inverse
 # Thanks 
 
 .bold[.large[link to visit this webslide:  
-**[https://wangcc.me/ACC_seaweed/](https://wangcc.me/ACC_seaweed/#1)**
+**[https://wangcc.me/ACC_seaweed/](https://wangcc.me/ACC_seaweed/#1)**<br>
 ]]
+
+
+--
+
+.bold[.large[Looking forward to seeing your data.]]
